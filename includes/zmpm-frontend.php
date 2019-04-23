@@ -39,7 +39,7 @@ function zmpm_check_if_authorized_on_template_include( $template ) {
 	// if not authorized, use the theme's page template and filter the title and content
 	header( "HTTP/1.1 401 Unauthorized" );
 	add_filter( 'wp_title', 'zpmp_get_error_title', 99999 ); // site <title>
-	add_filter( 'wpseo_title', 'wpseo_title', 99999 ); // yoast <title> filter
+	add_filter( 'wpseo_title', 'zpmp_get_error_title', 99999 ); // yoast <title> filter
 	add_filter( 'wpseo_metadesc', 'zpmp_get_error_content', 99999 ); // yoast meta description
 	
 	add_filter( 'the_title', 'zmpm_replace_title_with_error_message', 99999 ); // page title
