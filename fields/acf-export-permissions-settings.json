@@ -1,0 +1,155 @@
+[
+    {
+        "key": "group_5cad216806713",
+        "title": "Permissions Settings",
+        "fields": [
+            {
+                "key": "field_5cabd93b60761",
+                "label": "Behavior",
+                "name": "zmpm_behavior",
+                "type": "radio",
+                "instructions": "Control the behavior when an unauthorized user tries to access a restricted page.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "error": "Display an error message.",
+                    "redirect_page": "Redirect to another page on the website.",
+                    "redirect_url": "Redirect to a custom URL."
+                },
+                "allow_null": 0,
+                "other_choice": 0,
+                "default_value": "",
+                "layout": "vertical",
+                "return_format": "value",
+                "save_other_choice": 0
+            },
+            {
+                "key": "field_5cad55c7de7cc",
+                "label": "Error Title",
+                "name": "zmpm_error_title",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5cabd93b60761",
+                            "operator": "==",
+                            "value": "error"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Access Forbidden",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5cabdae660762",
+                "label": "Error Message",
+                "name": "zmpm_error_message",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5cabd93b60761",
+                            "operator": "==",
+                            "value": "error"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Sorry, you are not authorized to access this content.",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_5cabdb0060763",
+                "label": "Redirect Page",
+                "name": "zmpm_redirect_page",
+                "type": "page_link",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5cabd93b60761",
+                            "operator": "==",
+                            "value": "redirect_page"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": "",
+                "taxonomy": "",
+                "allow_null": 0,
+                "allow_archives": 1,
+                "multiple": 0
+            },
+            {
+                "key": "field_5cabdb4c60764",
+                "label": "Redirect URL",
+                "name": "zmpm_redirect_url",
+                "type": "url",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5cabd93b60761",
+                            "operator": "==",
+                            "value": "redirect_url"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "zingmap-permissions"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]
