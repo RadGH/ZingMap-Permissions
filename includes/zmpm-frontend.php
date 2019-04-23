@@ -12,9 +12,8 @@ if ( in_array( $behavior, array( 'redirect_url', 'redirect_page' ) ) ) {
 
 
 function zmpm_check_if_authorized_on_template_redirect() {
-	
 	if ( zmpm_is_user_authorized() ) {
-		return true;
+		return;
 	}
 	
 	$behavior = get_field( "zmpm_behavior", "options" );
