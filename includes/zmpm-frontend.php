@@ -120,7 +120,7 @@ function zmpm_is_user_authorized() {
 	}
 	
 	// if there were no permissions, the queried object is public
-	if ( ! isset( $permissions ) ) {
+	if ( empty( $permissions ) ) {
 		return true;
 	}
 	
